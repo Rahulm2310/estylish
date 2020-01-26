@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans Condensed', sans-serif;
   padding: 20px 60px;
+  background: linear-gradient(to right, #ffb347, #ffcc33);
 }
 
 a {
