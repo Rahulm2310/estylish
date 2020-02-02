@@ -1,46 +1,44 @@
-import React from 'react';
-import FormInput from '../form-input/form-input.component';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 
+import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
-import { SignUpContainer, SignUpTitle } from './sign-up.styles';
 import { signUpStart } from '../../redux/user/user.actions';
-import { connect } from 'react-redux';
-import { useState } from 'react';
+
+import { SignUpContainer, SignUpTitle } from './sign-up.styles';
 
 const SignUp = ({ signUpStart }) => {
-  const [newUserCredentials, setNewUserCredentials] = useState({
+  const [userCredentials, setUserCredentials] = useState({
     displayName: '',
     email: '',
     password: '',
     confirmPassword: ''
   });
 
-  const { displayName, email, password, confirmPassword } = newUserCredentials;
+  const { displayName, email, password, confirmPassword } = userCredentials;
 
   const handleSubmit = async event => {
     event.preventDefault();
 
     if (password !== confirmPassword) {
-      alert("Passwords don't Match !");
-
+      alert("passwords don't match");
       return;
     }
+
     signUpStart({ displayName, email, password });
   };
 
   const handleChange = event => {
     const { name, value } = event.target;
 
-    setNewUserCredentials({ ...newUserCredentials, [name]: value });
+    setUserCredentials({ ...userCredentials, [name]: value });
   };
 
   return (
     <SignUpContainer>
       <SignUpTitle>I do not have a account</SignUpTitle>
-
       <span>Sign up with your email and password</span>
-
       <form className='sign-up-form' onSubmit={handleSubmit}>
         <FormInput
           type='text'
@@ -50,7 +48,6 @@ const SignUp = ({ signUpStart }) => {
           label='Display Name'
           required
         />
-
         <FormInput
           type='email'
           name='email'
@@ -59,7 +56,6 @@ const SignUp = ({ signUpStart }) => {
           label='Email'
           required
         />
-
         <FormInput
           type='password'
           name='password'
@@ -68,7 +64,6 @@ const SignUp = ({ signUpStart }) => {
           label='Password'
           required
         />
-
         <FormInput
           type='password'
           name='confirmPassword'
@@ -77,7 +72,6 @@ const SignUp = ({ signUpStart }) => {
           label='Confirm Password'
           required
         />
-
         <CustomButton type='submit'>SIGN UP</CustomButton>
       </form>
     </SignUpContainer>
@@ -88,4 +82,7 @@ const mapDispatchToProps = dispatch => ({
   signUpStart: userCredentials => dispatch(signUpStart(userCredentials))
 });
 
-export default connect(null, mapDispatchToProps)(SignUp);
+export default connect(
+  null,
+  mapDispatchToProps
+)(SignUp);

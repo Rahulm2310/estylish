@@ -12,6 +12,7 @@ const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
 app.use(cors());
 
 if (process.env.NODE_ENV === 'production') {
@@ -22,8 +23,9 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-app.get('/', (req, res) => {
-  res.send('hello');
+app.listen(port, error => {
+  if (error) throw error;
+  console.log('Server running on port ' + port);
 });
 
 app.post('/payment', (req, res) => {
@@ -40,9 +42,4 @@ app.post('/payment', (req, res) => {
       res.status(200).send({ success: stripeRes });
     }
   });
-});
-
-app.listen(port, error => {
-  if (error) throw error;
-  console.log('Server running on port ' + port);
 });
