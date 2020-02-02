@@ -28,7 +28,6 @@
   },
   "scripts": {
     "start": "node ./node_modules/react-scripts/bin/react-scripts.js start",
-    "build": "node ./node_modules/react-scripts/bin/react-scripts.js build",
     "test": "node ./node_modules/react-scripts/bin/react-scripts.js test",
     "eject": "node ./node_modules/react-scripts/bin/react-scripts.js eject"
   },
@@ -48,3 +47,5 @@
     ]
   }
 }
+
+// "build": "node ./node_modules/react-scripts/bin/react-scripts.js build",
