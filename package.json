@@ -5,13 +5,14 @@
     "node": "10.15.3",
     "npm": "6.4.1"
   },
+  "homepage": "https://Rahulm2310.github.io/crwn-clothing",
   "scripts": {
     "client": "cd client && npm start",
     "server": "nodemon server.js",
     "build": "cd client && npm run build",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
