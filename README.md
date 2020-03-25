@@ -1,6 +1,6 @@
 # Estylish
 
-## Estylish is a full stack e-commerce app developed using React, Node & Express framework. 
+## Estylish is a full stack e-commerce app developed using React, Node & Express & Firebase.
 
 ## Technologies
 1. React.js (Front-end)
