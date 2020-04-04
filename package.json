@@ -1,18 +1,18 @@
 {
-  "name": "crwn-clothing-server",
+  "name": "estylish-server",
   "version": "1.0.0",
   "engines": {
     "node": "10.16.0",
     "npm": "6.4.1"
   },
   "scripts": {
-    "client": "cd client && yarn start",
+    "client": "cd client && npm run start",
     "server": "nodemon server.js",
     "build": "cd client && npm run build",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "start": "node server.js",
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
-    "test-client": "cd client && yarn test"
+    "test-client": "cd client && npm run test"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
