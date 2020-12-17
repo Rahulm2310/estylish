@@ -65,7 +65,6 @@ export const BackgroundImage = styled.div`
   border-radius:20px;
   background-image: ${({ imageUrl }) => `url(${imageUrl})`};
 `;
-
 BackgroundImage.displayName = 'BackgroundImage';
 
 export const CollectionFooterContainer = styled.div`
