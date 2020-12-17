@@ -1,12 +1,17 @@
 import styled from 'styled-components';
 
 export const CheckoutPageContainer = styled.div`
-  width: 55%;
+  width: 65%;
   min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 50px auto 0;
+  padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px lightgrey;
+}
 
   button {
     margin-left: auto;

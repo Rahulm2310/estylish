@@ -19,11 +19,12 @@ export const CollectionItem = ({ item, addItem }) => {
     <CollectionItemContainer>
       <BackgroundImage className='image' imageUrl={imageUrl} />
       <CollectionFooterContainer>
-        <NameContainer>{name}</NameContainer>
-        <PriceContainer>{price}</PriceContainer>
+        <NameContainer><p>{name}</p></NameContainer>
+        <PriceContainer>${price}</PriceContainer>
       </CollectionFooterContainer>
       <AddButton onClick={() => addItem(item)} inverted>
-        Add to cart
+        {/* Add to cart */}
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
       </AddButton>
     </CollectionItemContainer>
   );

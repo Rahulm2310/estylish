@@ -24,7 +24,7 @@ export const CollectionItemContainer = styled.div`
   }
 
   @media screen and (max-width: 800px) {
-    width: 40vw;
+    width: 45vw;
 
     &:hover {
       .image {
@@ -39,19 +39,36 @@ export const CollectionItemContainer = styled.div`
 `;
 
 export const AddButton = styled(CustomButton)`
-  width: 80%;
-  opacity: 0.9;
+  // width: 80%;
+  opacity: 1;
   position: absolute;
   top: 235px;
   display: none;
-  border-radius:15px;
+  padding:3px 5px;
+  border-radius:50%;
+  backgroud:white;
+  color:black;
+  min-width: auto;
+  width: 35px !important;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 20px;
+  border: none;
+  font-size: 20px;
 
-  @media screen and (max-width: 800px) {
-    display: block;
-    opacity: 0.9;
-    min-width: unset;
-    padding: 0 10px;
+  & i:hover{
+    font-size:20px;
   }
+
+
+  // @media screen and (max-width: 800px) {
+  //   display: block;
+  //   opacity: 0.9;
+  //   min-width: unset;
+  //   padding: 0 10px;
+  // }
 `;
 
 AddButton.displayName = 'AddButton';
@@ -79,14 +96,22 @@ export const CollectionFooterContainer = styled.div`
 CollectionFooterContainer.displayName = 'CollectionFooterContainer';
 
 export const NameContainer = styled.span`
-  width: 90%;
+  width: 75%;
   margin-bottom: 15px;
+
+  & p{
+    margin: 0px;
+    text-overflow: ellipsis;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
 `;
 
 NameContainer.displayName = 'NameContainer';
 
 export const PriceContainer = styled.span`
-  width: 10%;
+  width: 20%;
   text-align: right;
 `;
 

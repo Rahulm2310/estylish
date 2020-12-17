@@ -9,7 +9,7 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 import { signOutStart } from '../../redux/user/user.actions';
 
 // import { ReactComponent as Logo } from '../../assets/estylish.svg';
-import logo from '../../assets/estylish.png';
+import logo from '../../assets/estylish1.png';
 
 import {
   HeaderContainer,

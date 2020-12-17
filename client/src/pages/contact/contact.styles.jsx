@@ -16,9 +16,12 @@ export const ContactDetails = styled.div`
 `
 
 export const ContactHeading = styled.h2`
-  border:1px solid black;
-  padding:15px;
-  box-shadow: 5px 5px 0px 0px grey;
+  // border:1px solid black;
+  padding:20px;
+  // box-shadow: 5px 5px 0px 0px grey;
   text-align:center;
   width:380px;
+  border-radius: 20px;
+    background: white;
+    box-shadow: 0px 0px 10px lightgrey;
 `

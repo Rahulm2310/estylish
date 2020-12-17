@@ -1,7 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  background:-webkit-linear-gradient(#ffffff,#ffffff,rgba(89, 107, 107, 0.877));
+  background: -webkit-linear-gradient(
+    #ffffff,
+    #ffffff,
+    rgba(89, 107, 107, 0.577)
+  );
   background-attachment: fixed;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -15,11 +19,11 @@ code {
     monospace;
 }
 
-.fa{
+.fa {
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
 
-.fa:hover{
-  font-size:30px;
+.fa:hover {
+  font-size: 30px;
 }

@@ -12,7 +12,8 @@ export const MenuItemContainer = styled.div`
   position:relative;
   margin: 0 7.5px 15px;
   border-radius:20px;
-	overflow: hidden;
+  overflow: hidden;
+  box-shadow:0px 0px 10px lightgrey;
 
 	&:hover {
 		cursor: pointer;
@@ -38,6 +39,16 @@ export const MenuItemContainer = styled.div`
   @media screen and (max-width: 800px) {
     height: 200px;
   }
+
+  @media screen and (max-width: 700px) {
+    min-width:40%;
+    height:260px;
+  }
+
+  @media screen and (max-width: 500px) {
+    min-width:90%;
+    height:320px;
+  }
 `;
 
 MenuItemContainer.displayName = 'MenuItemContainer';
@@ -54,8 +65,8 @@ export const BackgroundImageContainer = styled.div`
 BackgroundImageContainer.displayName = 'BackgroundImageContainer';
 
 export const ContentContainer = styled.div`
-  height: 90px;
-  padding: 0 25px;
+  // height: 90px;
+  padding: 15px 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
